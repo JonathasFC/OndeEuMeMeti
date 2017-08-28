@@ -28,7 +28,7 @@ import a1.a2017.iff.ondeeumemeti.Utils.PermissionUtils;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
-    private TextView txtLatitude, txtLongitude, txtInfo;
+    private TextView txtInfo;
     private Button btnStart;
     private EditText etxtLatitude, etxtLongitude, etxtEndereco;
     private GoogleApiClient googleApiClient;
@@ -37,15 +37,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     private double longitude = 0.0;
     private String end = null;
 
-    String[] permissoes = new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION};
+    String[] permissoes = new String[]{android.Manifest.permission.ACCESS_COARSE_LOCATION, android.Manifest.permission.ACCESS_FINE_LOCATION};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtLatitude = (TextView) findViewById(R.id.txtLatitude);
-        txtLongitude = (TextView) findViewById(R.id.txtLongitude);
         txtInfo = (TextView) findViewById(R.id.txtInfo);
 
         etxtLatitude = (EditText) findViewById(R.id.etxtLatitude);
@@ -149,14 +147,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
             Log.i("LOG", "GPS não permitido!");
 
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-
             return;
         }
         Location location = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
@@ -164,8 +154,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         if (location != null){
             Log.i("LOG", "Latitude" + location.getLatitude());
             Log.i("LOG", "Longitude" + location.getLongitude());
-            txtLatitude.setText("Latitude: " + location.getLatitude());
-            txtLongitude.setText("Longitude: " + location.getLongitude());
 
         }
 

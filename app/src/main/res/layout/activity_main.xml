@@ -3,7 +3,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
-        android:background="@layout/earth"
+        android:background="@drawable/earth"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="a1.a2017.iff.ondeeumemeti.Activity.MainActivity">
@@ -15,8 +15,7 @@
             android:hint="Latitude"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/cast_expanded_controller_progress_text_color"
-            android:textColor="@color/wallet_highlighted_text_holo_dark"/>
+            android:background="@color/cast_expanded_controller_progress_text_color"/>
         <EditText
             android:id="@+id/etxtLongitude"
             android:hint="Longitude"
@@ -39,23 +38,6 @@
             android:text="Pesquisar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/txtLatitude"
-            android:text="Lat: "
-            android:textSize="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/cast_expanded_controller_progress_text_color"/>
-
-        <TextView
-            android:id="@+id/txtLongitude"
-            android:text="Long: "
-            android:textSize="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/cast_expanded_controller_progress_text_color"/>
-
 
         <TextView
             android:id="@+id/txtInfo"
