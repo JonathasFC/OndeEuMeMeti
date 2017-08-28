@@ -1,18 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="a1.a2017.iff.ondeeumemeti.MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:background="@layout/earth"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="a1.a2017.iff.ondeeumemeti.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/etxtLatitude"
+            android:hint="Latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cast_expanded_controller_progress_text_color"
+            android:textColor="@color/wallet_highlighted_text_holo_dark"/>
+        <EditText
+            android:id="@+id/etxtLongitude"
+            android:hint="Longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cast_expanded_controller_progress_text_color"/>
+
+
+
+        <EditText
+            android:id="@+id/etxtEndereco"
+            android:hint="Endereco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cast_expanded_controller_progress_text_color"/>
+
+
+        <Button
+            android:id="@+id/btnStart"
+            android:text="Pesquisar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtLatitude"
+            android:text="Lat: "
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cast_expanded_controller_progress_text_color"/>
+
+        <TextView
+            android:id="@+id/txtLongitude"
+            android:text="Long: "
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cast_expanded_controller_progress_text_color"/>
+
+
+        <TextView
+            android:id="@+id/txtInfo"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cast_expanded_controller_progress_text_color"/>
+</LinearLayout>
