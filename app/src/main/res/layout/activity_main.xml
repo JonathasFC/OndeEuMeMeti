@@ -6,7 +6,7 @@
         android:background="@layout/earth"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="a1.a2017.iff.ondeeumemeti.MainActivity">
+        tools:context="a1.a2017.iff.ondeeumemeti.Activity.MainActivity">
 
 
 
